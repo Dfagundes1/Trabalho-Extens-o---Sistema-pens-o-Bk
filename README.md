@@ -28,9 +28,7 @@ O sistema visa automatizar e facilitar o funcionamento de uma pensão, reduzindo
 ## Tecnologias Utilizadas
 
 - **Frontend**: HTML, CSS, JavaScript.
-- **Backend**: Node.js (ou outro servidor configurado).
-- **Mobile**: React para o aplicativo do entregador.
-- **Banco de Dados**: [Banco utilizado, ex.: MySQL, MongoDB].
+- **Backend**: Node.js servidor WebSocket.
 - **Ferramentas**: Visual Studio Code, Git.
 
 ## Como Executar o Projeto
