@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pedidos - Pensão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Sistema de Pedidos - Pensão</h1>
+
+    <!-- Formulário de pedido -->
+    <div id="form-container">
+        <form id="order-form">
+            <!-- Nome -->
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+
+            <!-- Endereço -->
+            <label for="address">Endereço:</label>
+            <input type="text" id="address" name="address" required>
+            <br>
+
+            <!-- Escolha do Item -->
+            <label for="item">Escolha o item:</label>
+            <select id="item" name="item" required>
+                <option value="frango">Frango Assado</option>
+                <option value="carne">Carne Assada</option>
+                <option value="peixe">Peixe</option>
+                <option value="montar">Montar Cardápio</option>
+            </select>
+            <br>
+
+            <!-- Personalização do Prato -->
+            <div id="customization-area" style="display: none;">
+                <label for="custom-items">Descreva como deseja montar o seu prato:</label>
+                <textarea id="custom-items" name="custom-items" placeholder="Exemplo: sem arroz, mais carne, etc..."></textarea>
+            </div>
+
+            <!-- Método de pagamento -->
+            <label for="payment">Método de pagamento:</label>
+            <select id="payment" name="payment" required>
+                <option value="dinheiro">Dinheiro</option>
+                <option value="cartao">Cartão</option>
+                <option value="pix">PIX</option>
+            </select>
+            <br>
+
+            <!-- Troco -->
+            <div id="troco-info" style="display: none;">
+                <label for="troco">Precisa de troco?</label>
+                <input type="number" id="troco" name="troco" placeholder="Valor do troco" min="0">
+            </div>
+
+            <!-- Informações sobre PIX -->
+            <div id="pix-info" style="display: none;">
+                <p>Após realizar a transferência via PIX, envie o comprovante para o WhatsApp da loja.</p>
+            </div>
+
+            <br>
+            <button type="submit">Finalizar Pedido</button>
+        </form>
+    </div>
+
+    <!-- Confirmação do Pedido -->
+    <div id="pedido-feito" style="display: none;">
+        <h2>Pedido feito com sucesso!</h2>
+        <p><strong>Pedido Nº:</strong> <span id="pedido-numero"></span></p>
+        <p><strong>Nome:</strong> <span id="pedido-nome"></span></p>
+        <p><strong>Endereço:</strong> <span id="pedido-endereco"></span></p>
+        <p><strong>Item:</strong> <span id="pedido-item"></span></p>
+        <p><strong>Método de Pagamento:</strong> <span id="pedido-pagamento"></span></p>
+        <button id="realizar-novo-pedido">Realizar novo pedido</button>
+    </div>
+
+    <!-- Status do Pedido -->
+    <div id="order-status">
+        <h2>Status do Pedido</h2>
+        <p id="status-text">Aguardando pedido...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
